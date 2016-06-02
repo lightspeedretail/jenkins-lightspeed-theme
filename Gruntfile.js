@@ -27,7 +27,7 @@ module.exports = function (grunt) {
 
     var fileCreatorTask = {};
     var lessFiles = {
-        "dist/material-light.css": "less/style.less",
+        "dist/material-lightspeed.css": "less/lightspeed-style.less",
         "dist/material-static.css": "less/static.less"
     };
     var replaceFiles = [
@@ -37,7 +37,7 @@ module.exports = function (grunt) {
     ];
 
     var cssMinFiles = {
-        'dist/material-light.css': ['dist/material-light.css'],
+        'dist/material-lightspeed.css': ['dist/material-lightspeed.css'],
         'dist/material-static.css': ['dist/material-static.css']
     };
 
@@ -166,8 +166,8 @@ module.exports = function (grunt) {
 
         imageEmbed: {
             light: {
-                src: ["dist/material-light.css"],
-                dest: "dist/material-light.css",
+                src: ["dist/material-lightspeed.css"],
+                dest: "dist/material-lightspeed.css",
                 options: {
                     deleteAfterEncoding: false
                 }

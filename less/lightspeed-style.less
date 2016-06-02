@@ -1,0 +1,264 @@
+@import "style";
+@import 'lightspeed';
+
+:not(div.ace_content) {
+  font-family: Lato, sans-serif !important;
+}
+
+body, table, form, td, th, p {
+  font-family: Lato, sans-serif !important;
+}
+
+#main-panel > pre {
+  font-family: Lato, sans-serif !important;
+}
+
+// Hide Jenkins logo
+
+#jenkins-home-link { display:none !important }
+
+// Console
+
+.console-output a {
+  color: @console-link;
+}
+
+// Lightspeed logo
+
+#header {
+  background-image: url('ls-logo.svg');
+  background-repeat: no-repeat;
+  background-size: auto 40px, cover;
+  background-position: 10px 10px;
+}
+
+
+.task-icon-link[href='/'] {
+  top: 12px !important;
+  left: 20px !important;
+  background: none !important;
+  height: 40px !important;
+  width: 170px !important;
+
+    & > img {
+        display:none !important;
+    }
+}
+
+// Links
+
+a:active { outline: none; }
+a:focus { outline: @color-mussel-dark dotted 1px; }
+
+// Login link inside header
+
+.login a:focus { outline: @color-lotus dotted 1px; }
+
+// Inputs
+
+input[type=text],
+input[type=password],
+textarea {
+    border: 1px solid @color-mussel-lite !important;
+    font-size: 14px !important;
+    border-radius: 3px !important;
+    padding-left: 6px !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: @color-waterfall dotted 1px !important;
+}
+
+// Login Inputs
+
+#j_username, input[type=password] {
+	padding: 4px;
+}
+
+// Dropdown items
+
+.yuimenuitem a, .yuimenuitem a:hover, .yuimenuitem a:visited, .yuimenuitem a:link {
+  opacity: 1 !important;
+}
+
+// Primary Button
+
+.yui-button {
+  button {
+    .lightspeed-button-green();
+
+  }
+  &.primary button {
+    color: @color-white !important;
+    background-color: @color-primary !important;
+    .lightspeed-button-green();
+  }
+
+  & + .yui-button {
+    margin-left: 1em;
+  }
+
+  & button:hover {
+    .lightspeed-button-green-hover();
+  }
+
+  & button:active {
+    .lightspeed-button-green-active();
+    .gradient(#56C374, lighten(#56C374, 5%));
+  }
+
+  & button:focus {
+      outline: @color-moss-dark dotted 1px;
+      outline-offset: -5px;
+      .no-transition()
+  }
+
+  & button:hover:focus {
+      outline-color: @color-lotus !important;
+    }
+
+  & button:active:focus {
+    outline-color: @color-lotus !important;
+    .no-transition()
+  }
+}
+
+// Non-Primary buttons
+
+.yui-push-button {
+    button {
+      .lightspeed-button-blue();
+    }
+
+    & button:hover {
+      .lightspeed-button-blue-hover();
+  }
+
+    & button:active {
+      .lightspeed-button-blue-active();
+      .gradient(darken(#12C6FB, 5%), #2BCCFB) !important;
+  }
+
+    & button:hover:focus {
+        outline-color: @color-lotus !important;
+    }
+
+    & button:focus {
+    outline: @color-waterfall-dark dotted 1px !important;
+    outline-offset: -5px !important;
+  }
+
+}
+
+// Delete button
+
+.repeatable-delete {
+
+    button {
+      .lightspeed-button-red();
+    }
+
+    & button:hover {
+        .lightspeed-button-red-hover();
+    }
+
+    & button:active {
+      .lightspeed-button-red-active();
+      .gradient(@color-mapleleaf-dark, lighten(@color-mapleleaf-dark, 5%)) !important;
+    }
+
+    & button:focus {
+      outline: @color-mapleleaf-dark dotted 1px;
+      outline-offset: -5px;
+
+    }
+
+      & button:hover:focus {
+        outline-color: @color-lotus !important;
+    }
+
+    & button:active:focus {
+        outline-color: @color-lotus !important;
+  }
+}
+
+// Small delete button
+
+.config-table.scrollspy .repeatable-delete button {
+    outline-offset: -1px !important;
+    outline-width: 3px !important;
+    width: 44px;
+    box-shadow: inset 0 -20px @color-mapleleaf-dark,
+      inset 1px 0 @color-mapleleaf-dark,
+      inset -45px 0 @color-mapleleaf-dark !important;
+}
+
+// Dropdown
+
+.yui-menu-button {
+    button {
+      .lightspeed-button-generic();
+      background: @color-white !important;
+      box-shadow: 0 1px 3px 0 rgba(195,202,204,0.40), inset 0px -1px 3px 0px rgba(131,138,138,0.20) !important;
+      border-radius: 3px !important;
+      color: @color-text !important;
+      line-height: 18px!important;
+      text-shadow: 0 1px 0 rgba(255,255,255,0.94) !important;
+    }
+
+    & button:hover {
+        color: @color-text !important;
+        background: @color-white !important;
+        background-image: linear-gradient(0deg, #F8F8F8 32%, #ECECEC 100%) !important;
+        border: 1px solid #C4CACC !important;
+        box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.24) !important;
+        border-radius: 3px !important;
+        text-shadow: none !important;
+    }
+
+   & button:active {
+        color: @color-text !important;
+        background: @color-white !important;
+        background-image: linear-gradient(0deg, #F8F8F8 32%, #ECECEC 100%) !important;
+        border: 1px solid #C4CACC !important;
+        box-shadow: inset 0 0 3px 0 rgba(0,0,0,0.24) !important;
+        border-radius: 3px !important;
+        text-shadow: none !important;
+   }
+
+}
+
+.bd {
+    border-radius: 5px !important;
+}
+
+.bd li {
+    background-color: @color-white !important;
+    padding: 2px !important;
+    border-top: solid 1px @color-lotus-dark !important;
+}
+
+.bd li a {
+    font-family: Lato, sans-serif;
+    font-size: 14px;
+}
+
+.yuimenuitem-selected {
+    background-color: @color-white !important;
+    & > a {
+      color: @color-white !important;
+
+      & > img {
+        filter: none !important;
+      }
+    }
+}
+
+.yuimenuitemlabel {
+    padding: 5px!important;
+}
+
+.yuimenuitemlabel-selected {
+    color: @color-white !important;
+    background-color: @color-waterfall-dark !important;
+}
